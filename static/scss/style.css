@@ -68,9 +68,9 @@ a, a:visited, a:hover { text-decoration: none; }
 
 .header.open .header__toggle > span:last-child { transform: rotate(-45deg); }
 
-.header .overlay { opacity: 0; position: fixed; top: 0; right: 0px; bottom: 0px; left: 0px; background-color: white; }
+.header .overlay { z-index: 1; opacity: 0; position: fixed; top: 0; right: 0px; bottom: 0px; left: 0px; background-color: white; }
 
-.header nav { position: relative; background-color: white; padding-top: 1.0625rem; padding-bottom: 1.0625rem; background-color: white; }
+.header nav { z-index: 2; position: relative; background-color: white; padding-top: 1.0625rem; padding-bottom: 1.0625rem; background-color: white; }
 
 .header__logo { padding-left: 1.25rem; }
 
@@ -80,7 +80,7 @@ a, a:visited, a:hover { text-decoration: none; }
 
 .header__toggle > span:not(:last-child) { margin-bottom: 5px; }
 
-.header__menu { position: absolute; width: calc(100% - 3rem); left: 50%; transform: translateX(-50%); background: white; margin-top: 1.5rem; padding: 1.625rem; border-radius: 5px; }
+.header__menu { z-index: 1; position: absolute; width: calc(100% - 3rem); left: 50%; transform: translateX(-50%); margin-top: 1.5rem; padding: 1.625rem; border-radius: 5px; }
 
 .header__menu a { display: block; color: #2d314d; padding: 0.625rem; text-align: center; }
 
@@ -96,11 +96,11 @@ a, a:visited, a:hover { text-decoration: none; }
 
 @media (min-width: 64em) { .hero { display: flex; align-items: center; } }
 
-.hero__image { position: relative; background-image: url("/main/static/images/hero_image.svg"); background-size: 100%; background-repeat: no-repeat; background-position: center center; min-height: 17.5rem; }
+.hero__image { position: relative; background-image: url("/static/scss/images/hero_image.svg"); background-size: 100%; background-repeat: no-repeat; background-position: center center; min-height: 17.5rem; }
 
 @media (min-width: 64em) { .hero__image { flex: 1; order: 2; height: 34rem; background-image: none; } }
 
-@media (min-width: 64em) { .hero__image::after { left: -40px; content: ""; height: 89%; width: 129%; position: absolute; background-image: url("/main/static/images/hero_image.svg"); background-size: 100%; background-repeat: no-repeat; background-position: center 92%; } }
+@media (min-width: 64em) { .hero__image::after { left: -40px; content: ""; height: 89%; width: 129%; position: absolute; background-image: url("/static/scss/images/hero_image.svg"); background-size: 100%; background-repeat: no-repeat; background-position: center 92%; } }
 
 .hero__text { text-align: center; }
 

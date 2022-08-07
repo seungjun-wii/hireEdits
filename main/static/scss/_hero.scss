@@ -6,7 +6,7 @@
 
     &__image {
         position: relative;
-        background-image: url("/main/static/images/hero_image.svg");
+        background-image: url("/static/scss/images/hero_image.svg");
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center center;
@@ -28,7 +28,7 @@
                 height: 89%;
                 width: 129%;
                 position: absolute;
-                background-image: url('/main/static/images/hero_image.svg');
+                background-image: url('/static/scss/images/hero_image.svg');
                 background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: center 92%;
