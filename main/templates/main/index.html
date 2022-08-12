@@ -1,55 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
-{% load sass_tags %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/svg" sizes="32x32" href="{% static '/images/site-logo.svg' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{% sass_src './scss/style.scss' %}">
-
-    <title>HIRE</title>
-</head>
-<body>
-    
-    <header class="header">   
-        <div class="overlay has-fade hide-for-desktop"></div>
-
-        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
-            <a href="/" class="header__logo">
-                <img src="{% static '/images/logo.svg' %}" alt="hire">
-            </a>
-
-            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-
-            <div class="header__links hide-for-mobile">
-                <a href="#">About Us</a>
-                <a href="#">Opportunities</a>
-                <a href="#">Contact</a>
-            </div>
-
-            <a href="#" class="button hide-for-mobile">Sign Up</a>
-
-        </nav>
-
-        <div class="header__menu has-fade hide-for-desktop">
-            <a href="#">About Us</a>
-            <a href="#">Opportunities</a>
-            <a href="#">Contact</a>
-        </div>
-
-    </header>
-
+{% block content %}
     <section class="hero container">
         <div class="hero__image">
 
@@ -68,7 +20,4 @@
         </div>
 
     </section>
-
-    <script src="{% static 'script.js' %}"></script>
-</body>
-</html>
+{% endblock %}
