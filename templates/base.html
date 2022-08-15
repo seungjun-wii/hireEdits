@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{% sass_src './scss/style.scss' %}">
+    <link href="{% sass_src './scss/scss/style.scss' %}" rel="stylesheet" type="text/css" />
 
     <title>HIRE</title>
 </head>
@@ -52,6 +52,37 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+
+            <a href="#" class="footer__logo">
+                <img src="/static/images/logo-dark.svg">
+            </a>
+
+            <div class="footer__social">
+                <a href="#">
+                    <img src="/static/images/icon-instagram.svg" alt="instagram">
+                </a>
+            
+            </div>
+
+            <div class="footer__links">
+                <a href="#">About Us</a>
+                <a href="#">Opportunities</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer__cta">
+                <a href="#" class="button">Sign Up</a>
+            </div>
+
+            <div class="footer__copyright">
+                &copy; Hire. All Rights Reserved
+            </div>
+        </div>
+
+    </footer>
 
     <script src="{% static 'script.js' %}"></script>
 </body>
