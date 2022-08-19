@@ -158,4 +158,26 @@ a, a:visited, a:hover { text-decoration: none; }
 
 @media (min-width: 64em) { .footer__copyright { grid-area: copyright; align-self: end; justify-self: end; } }
 
+.infoA { background-color: #f3f4f6; }
+
+.infoA h1 { font-size: 2.125rem; color: #2d314d; margin-bottom: 5px; }
+
+.infoA h2 { font-size: 1.3125rem; }
+
+.infoA__intro { padding-bottom: 2.375rem; }
+
+.infoA__box { display: flex; height: 378px; }
+
+.infoA__box p { margin-bottom: 0; font-size: 1rem; }
+
+.infoA__box h2 { color: #2d314d; }
+
+.infoA__box1 { display: block; width: 90%; }
+
+.infoA__box2 { display: block; align-self: flex-end; }
+
+.infoA__gap { width: 5.3125rem; height: 0.5rem; transform: translateY(15rem); background-color: #A6E9EB; }
+
+.infoA__text { background: white; padding-top: 26px; padding-right: 22px; padding-bottom: 26px; padding-left: 22px; line-height: 1.9; }
+
 /*# sourceMappingURL=style.css.map */
