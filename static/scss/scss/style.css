@@ -28,6 +28,8 @@ body.noscroll { overflow: hidden; }
 
 h1, h2, h3 { margin-top: 0; }
 
+h1 { font-size: 2.125rem; color: #2d314d; }
+
 a, a:visited, a:hover { text-decoration: none; }
 
 .container { max-width: 73rem; margin: 0 auto; }
@@ -158,15 +160,15 @@ a, a:visited, a:hover { text-decoration: none; }
 
 @media (min-width: 64em) { .footer__copyright { grid-area: copyright; align-self: end; justify-self: end; } }
 
-.infoA { background-color: #f3f4f6; }
+.infoA { background: #f3f4f6; }
 
-.infoA h1 { font-size: 2.125rem; color: #2d314d; margin-bottom: 5px; }
+.infoA h1 { margin-bottom: 5px; }
 
 .infoA h2 { font-size: 1.3125rem; }
 
 .infoA__intro { padding-bottom: 2.375rem; }
 
-.infoA__box { display: flex; height: 378px; }
+.infoA__box { display: flex; height: 350px; }
 
 .infoA__box p { margin-bottom: 0; font-size: 1rem; }
 
@@ -179,5 +181,43 @@ a, a:visited, a:hover { text-decoration: none; }
 .infoA__gap { width: 5.3125rem; height: 0.5rem; transform: translateY(15rem); background-color: #A6E9EB; }
 
 .infoA__text { background: white; padding-top: 26px; padding-right: 22px; padding-bottom: 26px; padding-left: 22px; line-height: 1.9; }
+
+.infoB h1 { margin-bottom: 2.1875rem; }
+
+.infoB h2 { font-size: 1.5625rem; color: #2d314d; }
+
+.infoB p { font-size: 1.4rem; line-height: 1.7; margin-bottom: 0; }
+
+.infoC { background: #f3f4f6; }
+
+.infoC h1 { margin-bottom: 2.1875rem; }
+
+.infoC__box { display: flex; }
+
+.infoC__box p { margin-bottom: 0; font-size: 1rem; }
+
+.infoC__box h2 { color: #2d314d; }
+
+.infoC__boxText { width: 100%; background: white; padding-top: 26px; padding-right: 22px; padding-bottom: 26px; padding-left: 22px; line-height: 1.9; }
+
+.infoC__gap { width: 5.0625rem; height: 0.5rem; align-self: center; background-color: #A6E9EB; }
+
+.partners h1 { font-size: 2.125rem; color: #2d314d; margin-bottom: 0; }
+
+.about h2 { font-size: 1.5125rem; color: #2d314d; }
+
+.compInfo p { color: white; font-size: 1.25rem; }
+
+.compInfo__box { background: #2d314d; border-radius: 3.125rem; margin-bottom: 5.4375rem; padding-top: 2.5rem; padding-right: 3.75rem; padding-bottom: 2.5rem; padding-left: 3.75rem; }
+
+.compInfo__img h1 { color: white; text-align: center; margin-bottom: 0.9375rem; }
+
+.compInfo__img img { height: 14.0625rem; width: 14.0625rem; border-radius: 1.875rem; }
+
+.compInfo__img h2 { color: white; text-align: center; margin-bottom: 0; }
+
+.compInfo__text { align-self: center; }
+
+.compInfo__more { align-self: center; text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
