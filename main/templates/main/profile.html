@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+    <section class="profile">
+
+        <div class="flex flex-jc-sb container container--pall">
+
+            <div class="profile__summary flex flex-jc-sb container--pall">
+                <div class="profile__text">
+                    <h2>
+                        [Name]
+                    </h2>
+    
+                    <p>
+                        Email:
+                        <br>
+                        010-xxxx-xxxx
+                        <br>
+                        School: Korea International School Jeju
+                        <br>
+                        Grade level: 10
+                        <br>
+                        Interests: #
+                    </p>
+                </div>
+                
+                <a href="profile/edit" class="button">Edit</a>
+            </div>
+
+            <div class="profile__button">
+                <a href="#" class="button b1">Check Application Status</a>
+            
+                <a href="#" class="button b2">Log Out</a>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

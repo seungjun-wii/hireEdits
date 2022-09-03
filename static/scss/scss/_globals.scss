@@ -2,6 +2,7 @@ html {
     overflow-x: hidden;
     font-size: 100%;
     box-sizing: border-box;
+    // height: 100%;
 }
 
 *, *::before, *::after {
@@ -70,6 +71,10 @@ a, a:visited, a:hover {
 //flexbox
 .flex {
     display: flex;
+
+    &-col {
+        flex-direction: column;
+    }
 
     &-jc-sb {
         justify-content: space-between;
