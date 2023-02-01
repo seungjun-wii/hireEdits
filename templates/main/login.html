@@ -32,12 +32,21 @@
 
             <h1>HIRE</h1>
 
-            <input type="text" id="userid" name="username" placeholder="Email, phone number">
-            <input type="text" id="userpw" name="password" placeholder="Password">
+            <form method="POST" action="{% url 'login' %}">
 
-            <a href="#" class="button">Log In</a>
+                {% for message in messages %}
+                    <p class="loginP__error">Incorrect username or password.</p>
+                {% endfor %}
 
-            <a href="#" class="signin">Sign Up</a>
+                {% csrf_token %}
+                <input type="text" id="usernmae" name="username" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Password">
+
+                <input type="submit" value="Log In">
+
+            </form>
+
+            <a href="/signup" class="signin">Sign Up</a>
 
         </div>
 

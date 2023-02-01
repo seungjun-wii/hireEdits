@@ -26,7 +26,7 @@
                 <img src="{% static '/images/logo.svg' %}" alt="hire">
             </a>
 
-            <a id="btnHamburger" href="/login" class="header__toggle hide-for-desktop">
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,7 +38,13 @@
                 <a href="/profile">Profile</a>
             </div>
 
-            <a href="/login" class="button hide-for-mobile">Sign In</a>
+            {% if user.is_authenticated %}
+                <div class="header flex flex-ai-c">
+                    <a href="/logout" class="button hide-for-mobile">Logout</a>
+                </div>
+            {% else %}
+                <a href="/login" class="button hide-for-mobile">Sign In</a>
+            {% endif %}
 
         </nav>
 
@@ -61,7 +67,7 @@
             </a>
 
             <div class="footer__social">
-                <a href="#">
+                <a href="https://www.instagram.com/hire_064/" target="_balnk" rel="noopener noreferrer">
                     <img src="/static/images/icon-instagram.svg" alt="instagram">
                 </a>
             
@@ -73,9 +79,15 @@
                 <a href="/profile">Profile</a>
             </div>
 
-            <div class="footer__cta">
-                <a href="/login" class="button">Sign In</a>
-            </div>
+            {% if user.is_authenticated %}
+                <div class="footer__cta">
+                    <a href="/logout" class="button">Logout</a>
+                </div>
+            {% else %}
+                <div class="footer__cta">
+                    <a href="/login" class="button">Sign In</a>
+                </div>
+            {% endif %}
 
             <div class="footer__copyright">
                 &copy; Hire. All Rights Reserved

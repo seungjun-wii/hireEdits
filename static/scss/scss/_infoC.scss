@@ -2,20 +2,18 @@
 
     background: $lightBlue;
 
-    h1 {
-        margin-bottom: 2.1875rem;
-    }
-
     &__box {
         display: flex;
 
         p {
-            margin-bottom: 0;
             font-size: 1rem;
+            width: 62%;
+            margin: 0 auto;
         }
         
         h2 {
             color: $darkBlue;
+            margin-bottom: 5px;
         }
     }
 
@@ -24,17 +22,10 @@
         background: $white;
         padding-top: 26px;
         padding-right: 22px;
-        padding-bottom: 26px;
+        padding-bottom: 40px;
         padding-left: 22px;
 
         line-height: 1.9;
-    }
-
-    &__gap {
-        width: 5.0625rem;
-        height: 0.5rem;
-        align-self: center;
-        background-color: $cyan;
     }
 
 }
