@@ -8,7 +8,6 @@ urlpatterns = [
     path("opportunity/", views.opport, name="opport"),
     path("opportunity/exclusive", views.opportExc, name="opportExc"),
     path("opportunity/university", views.opportUniv, name="opportUniv"),
-    path("opportunity/other", views.opportOther, name="opportOther"),
     path("profile/", views.profile, name="profile"),
     path("profile/edit", views.edit, name="edit"),
     path("opportunity/company1", views.company1, name="company"),

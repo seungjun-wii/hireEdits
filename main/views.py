@@ -23,9 +23,6 @@ def opportExc(response):
 def opportUniv(response):
     return render(response, "main/opportUniv.html", {})
 
-def opportOther(response):
-    return render(response, "main/opportOther.html", {})
-
 def profile(request):
     if request.user.is_authenticated:
         currentUser = request.user

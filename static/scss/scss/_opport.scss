@@ -64,4 +64,25 @@
         }
     }
 
+    &__msg {
+
+        padding-top: 0;
+
+        h1 {
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 0;
+        }
+
+        p {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .buttom {
+            align-self: center;
+        }
+
+    }
+
 }

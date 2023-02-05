@@ -234,6 +234,14 @@ a, a:visited, a:hover { text-decoration: none; }
 
 .compInfo__categories .button { color: #848189; margin-right: 20px; background-color: white; border-color: #848189; }
 
+.compInfo__msg { padding-top: 0; }
+
+.compInfo__msg h1 { text-align: center; font-size: 5rem; margin-bottom: 0; }
+
+.compInfo__msg p { padding-top: 20px; text-align: center; }
+
+.compInfo__msg .buttom { align-self: center; }
+
 .profile { background-color: #f3f4f6; min-height: calc(100vh - 81.87px - 169.27px); }
 
 .profile__summary { background: white; border-radius: 3.125rem; width: 45rem; padding-top: 2.5rem; padding-right: 3.75rem; padding-bottom: 2.5rem; padding-left: 3.75rem; }
