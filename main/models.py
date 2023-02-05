@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 # Create your models here.
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, user_id, email, date_of_birth, school, password=None, **extra_fields):
+    def create_user(self, user_id, name, date_of_birth, school, password=None, **extra_fields):
         """
         Creates and saves a User with the given email, date of
         birth and password.
@@ -14,7 +14,7 @@ class MyUserManager(BaseUserManager):
 
         user = self.model(
             user_id=user_id,
-            email=email,
+            name=name,
             date_of_birth=date_of_birth,
             school=school,
             **extra_fields
@@ -23,14 +23,14 @@ class MyUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, user_id, email, password, **extra_fields):
+    def create_superuser(self, user_id, name, password, **extra_fields):
         """
         Creates and saves a superuser with the given email, date of
         birth and password.
         """
         user = self.create_user(
             user_id,
-            email,
+            name,
             '2005-07-01',
             password=password,
             **extra_fields
@@ -41,7 +41,7 @@ class MyUserManager(BaseUserManager):
 
 class MyUser(AbstractBaseUser):
     user_id = models.CharField(max_length=255, unique=True)
-    email = models.CharField(max_length=40, default='')
+    name = models.CharField(max_length=40, default='')
     date_of_birth = models.DateField()
     school = models.CharField(max_length=40, default='')
     is_active = models.BooleanField(default=True)
@@ -50,7 +50,7 @@ class MyUser(AbstractBaseUser):
     objects = MyUserManager()
 
     USERNAME_FIELD = 'user_id'
-    REQUIRED_FIELDS = ['email', 'school']
+    REQUIRED_FIELDS = ['name', 'school']
 
     def get_id(self):
         # The user is identified by their email address
@@ -79,6 +79,7 @@ class MyUser(AbstractBaseUser):
 
 class UserInfo(models.Model):
     user_id = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=40, default='')
     intro = models.CharField(max_length=511, default= '', blank=True)
     skills = models.CharField(max_length=511, default= '', blank=True)
     experience = models.CharField(max_length=511, default= '', blank=True)

@@ -11,13 +11,13 @@ class UserForm(forms.Form):
             "user_id",
             "password",
             "re_password",
-            "email",
+            "name",
             "school",
             "date_of_birth",
         )
 
     user_id = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    email = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+    name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     school = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     re_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))

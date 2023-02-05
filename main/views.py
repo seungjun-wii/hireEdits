@@ -28,7 +28,7 @@ def profile(request):
         currentUser = request.user
         user = MyUser.objects.get(pk = currentUser.id)
 
-        return render(request, "main/profile.html", {"email": user.email, "birthday": user.date_of_birth, "school": user.school})
+        return render(request, "main/profile.html", {"name": user.name, "birthday": user.date_of_birth, "school": user.school})
 
     return render(request, "main/login.html")
 
@@ -60,7 +60,7 @@ def signup(request):
         if form.is_valid() and form.clean():
             user = MyUser.objects.create_user(
                 form.cleaned_data['user_id'],
-                form.cleaned_data['email'],
+                form.cleaned_data['name'],
                 form.cleaned_data['date_of_birth'],
                 form.cleaned_data['school'],
                 form.cleaned_data['password'],
@@ -68,7 +68,7 @@ def signup(request):
 
             user.save()
 
-            UserInfo(user_id = form.cleaned_data['user_id']).save()
+            UserInfo(user_id = form.cleaned_data['user_id'], name = form.cleaned_data['name']).save()
 
             return redirect('login')
 
